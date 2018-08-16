@@ -1,0 +1,36 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0                            http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>C:\Users\syeda.firdaus\.m2\repository</localRepository>
+  <pluginGroups>
+    <pluginGroup>org.mule.tools</pluginGroup>
+	<pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+  </pluginGroups>
+  <mirrors>
+    <mirror>
+      <id>codehaus-mule-mirror</id>
+      <url>https://repository-master.mulesoft.org/nexus/content/groups/public/</url>
+      <mirrorOf>codehaus-releases</mirrorOf>
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+    <id>Mule Org</id>
+    <activation>
+        <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Repository</name>
+            <url>https://repository-master.mulesoft.org/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>mulesoft-snapshots</id>
+            <name>MuleSoft Snapshot Repository</name>
+            <url>https://repository-master.mulesoft.org/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</profile>
+  </profiles>
+</settings>
