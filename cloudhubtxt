@@ -1,0 +1,1 @@
+mvn mule:deploy -X -Dmule.deploymentType=cloudhub -Dmule.username=brillio082018 -Dmule.password=Brillio123 -Dmule.uri=https://anypoint.mulesoft.com -Dmule.environment=Sandbox -Dmule.version=4.0.0
