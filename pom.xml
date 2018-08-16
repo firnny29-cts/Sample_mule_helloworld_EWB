@@ -18,6 +18,33 @@
 
 	<build>
 		<plugins>
+				<plugin>
+	<groupId>org.mule.tools.maven</groupId>
+    <artifactId>mule-maven-plugin</artifactId>
+    <version>2.0</version>
+    <configuration>
+        <deploymentType>cloudhub</deploymentType>
+        <!-- muleVersion is the runtime version as it appears on the CloudHub interface -->
+        <muleVersion>${mule.version}</muleVersion>
+        <username>Brillio082018</username>
+        <password>Brillio123</password>
+        <redeploy>true</redeploy>
+        <environment>Sandbox</environment>
+        <muleVersion>3.9.0</muleVersion>
+		<workers>1</workers>
+		<workerType>MICRO</workerType>
+		<region>us-west-2</region>
+    </configuration>
+    <executions>
+        <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+                <goal>deploy</goal>
+            </goals>
+        </execution>
+    </executions>
+    </plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
